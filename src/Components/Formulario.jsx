@@ -13,7 +13,7 @@ export function Formulario() {//contenidos del formulario
   const [ValorPoliza, EstablecerValorPoliza] = useState("0.00");
   const costoMetroCuadrado = 35.86;
   useEffect(() => {
-    fetch("../src/Components/datos.json")
+    fetch("../public/datos.json")
       .then((response) => response.json())
       .then((data) => {
         const ubicacion = data.filter((item) => item.categoria === "ubicacion");
